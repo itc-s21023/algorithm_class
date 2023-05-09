@@ -1,1 +1,1 @@
-python授業
+Lesson1-1終了
