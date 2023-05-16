@@ -4,15 +4,18 @@ p[1] = False
 n = 2
 
 def hyou():
+    count = 0
     s = ""
     for i in range(81):
         if p[i] == True:
             s += "{:2d}, ".format(i)
+            count += 1
         else:
             s += "/, "
-        if i % 9 == 8:
-            s += "¥n"
+        if i % 10 == 9:
+            s += "\n"
     print(s)
+    print("素数は" + str(count) + "です")
 
 def furui():
     global n
@@ -29,3 +32,6 @@ hyou()
 while n < 9:
     input("Enterキーを押せ")
     furui()
+
+
+
