@@ -12,7 +12,7 @@ def hyou():
             count += 1
         else:
             s += "/, "
-        if i % 10 == 9:
+        if i % 9 == 8:
             s += "\n"
     print(s)
     print("素数は" + str(count) + "です")
