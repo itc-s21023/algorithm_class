@@ -1,4 +1,4 @@
-MAX = 6
+MAX = 6  #キューの最大指定
 que = [0] * MAX
 head = 0
 tail = 0
@@ -6,13 +6,13 @@ tail = 0
 def enqueue(d):
     global tail
     nt = (tail + 1) % MAX
-    if nt == head:
+    if nt == head:  #キューの空きがないなら
         print("これ以上入れられません")
-    else:
+    else:  #空きがあるなら
         que[tail] = d
         tail = nt
-        print("データ", d, "を追加")
-        wait_time = (tail - head) * 15
+        print(d, "人待ちに入る")
+        wait_time = (tail - head) * 15 ##待ち時間を表示する
         print("待ち時間:", wait_time, "分")
 
 def dequeue():
@@ -23,6 +23,9 @@ def dequeue():
     else:
         d = que[head]
         head = (head + 1) % MAX
+        print("待ちから", d, "人出る")
+        wait_time = (tail - head) * 15
+        print("待ち時間:", wait_time, "分")  #待ち時間を表示する
         return d
 
 
@@ -32,5 +35,3 @@ enqueue(3)
 dequeue()
 dequeue()
 enqueue(4)
-
-
