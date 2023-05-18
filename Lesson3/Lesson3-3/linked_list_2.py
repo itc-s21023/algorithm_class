@@ -63,7 +63,9 @@ put_list()
 
 # (2) 東京→福岡→大阪→名古屋
 del_list("大阪")
-add_list("福岡")
+del_list("名古屋")
+add_list("大阪")
+add_list("名古屋")
 
 put_list()
 
