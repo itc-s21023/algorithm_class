@@ -70,6 +70,6 @@ add_list("名古屋")
 put_list()
 
 # (3) 東京→福岡→大阪→名古屋→東京
-add_list("東京")
+add_list("東京2")
 
 put_list()
