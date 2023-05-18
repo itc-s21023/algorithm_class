@@ -16,7 +16,7 @@ def enqueue(data):
     next_tail = (tail + 1) % MAX_SIZE # 次の末尾インデックスを計算
 
     if next_tail == head:
-        print('待ち列がいっぱいです')
+        print('待ちが満杯')
     else:
         queue[tail] = data
         tail = next_tail
@@ -32,7 +32,7 @@ def dequeue():
         data = queue[head]
         queue[head] = 0
         head = (head + 1) % MAX_SIZE
-        print(f'{data}が列から出ました')
+        print(f'{data}が待ちから出ました')
         return data
 
 for i in range(3):
