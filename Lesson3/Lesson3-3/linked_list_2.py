@@ -53,7 +53,7 @@ def put_list():
             break
         p = pointer[p]
 
-# (1) 東京→大阪→福岡→名古屋
+#東京→大阪→福岡→名古屋
 add_list("東京")
 add_list("大阪")
 add_list("福岡")
@@ -61,7 +61,7 @@ add_list("名古屋")
 
 put_list()
 
-# (2) 東京→福岡→大阪→名古屋
+#東京→福岡→大阪→名古屋
 del_list("大阪")
 del_list("名古屋")
 add_list("大阪")
@@ -69,7 +69,7 @@ add_list("名古屋")
 
 put_list()
 
-# (3) 東京→福岡→大阪→名古屋→東京
+#東京→福岡→大阪→名古屋→東京
 add_list("東京2")
 
 put_list()
