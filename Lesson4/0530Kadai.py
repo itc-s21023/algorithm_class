@@ -6,6 +6,7 @@ data = [
 ]
 n = len(data)
 s = input("検索する相手の苗字は? ")
+data.append(s)
 i = 0
 while i < n and data[i][0] != s:
     i += 1
