@@ -40,19 +40,19 @@ while True:
     if n == 1:
         if s.lower() == "no":
             print("解熱剤で病院")
-            break  # 処理を終了する
+            break  # 処理を終了
         elif s.lower() == "yes":
             print("速攻で病院")
-            break  # 処理を終了する
+            break  # 処理を終了
         else:
             print("YesまたはNoで回答してください")
     elif n == 2:
         if s.lower() == "no":
             print("氷枕で病院")
-            break  # 処理を終了する
+            break  # 処理を終了
         elif s.lower() == "yes":
             print("様子を見る")
-            break  # 処理を終了する
+            break  # 処理を終了
         else:
             print("YesまたはNoで回答してください")
     else:
