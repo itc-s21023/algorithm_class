@@ -4,17 +4,20 @@ def euclid(a, b):
     else:
         return euclid(b, a % b)
 
-def lcm(a, b):
-    gcd = euclid(a, b)
-    return (a * b) // gcd
+def gcd(a, b):
+    return euclid(a, b)
 
-def gcd_multiple_numbers(numbers):
+def lcm(a, b):
+    gcd_value = gcd(a, b)
+    return (a * b) // gcd_value
+
+def find_gcd(numbers):
     result = numbers[0]
     for i in range(1, len(numbers)):
-        result = euclid(result, numbers[i])
+        result = gcd(result, numbers[i])
     return result
 
-def lcm_multiple_numbers(numbers):
+def find_lcm(numbers):
     result = numbers[0]
     for i in range(1, len(numbers)):
         result = lcm(result, numbers[i])
@@ -27,5 +30,10 @@ c = int(input("c="))
 
 numbers = [a, b, c]
 
-print("それらの数の最大公約数は", gcd_multiple_numbers(numbers))
-print("それらの数の最大公倍数は", lcm_multiple_numbers(numbers))
+gcd_value = find_gcd(numbers)
+lcm_value = find_lcm(numbers)
+
+print("それらの数の最大公約数は", gcd_value)
+print("それらの数の最小公約数は", gcd_value // lcm_value)
+print("それらの数の最大公倍数は", lcm_value)
+print("それらの数の最小公倍数は", lcm_value // gcd_value)
